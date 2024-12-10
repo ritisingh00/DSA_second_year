@@ -1,0 +1,26 @@
+arr=[]
+n=int(input("enter no of students: "))
+
+for i in range(n):
+    p=float(input("enter percentage: "))
+    arr.append(p)
+print(arr)
+
+#bubble sort
+
+for i in range(n):
+    for j in range(0,n-i-1):
+        if arr[j]>arr[j+1]:
+            arr[j],arr[j+1]=arr[j+1],arr[j]
+print("sorted array is: ",arr)          
+print("top five score is: ",arr[-5:])  
+
+#selection sort
+
+for i in range(n):
+    for j in range(0,n-1):
+        k=j+1
+        if arr[j]>arr[k]:
+            arr[k],arr[j]=arr[j],arr[k]
+print("sorted array is: ",arr)            
+
